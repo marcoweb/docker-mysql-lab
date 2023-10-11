@@ -12,6 +12,8 @@ services:
       MYSQL_ROOT_PASSWORD: rootpass
     volumes:
       - ./data:/docker-entrypoint-initdb.d
+    ports:
+      - 3306:3306
 
   phpmyadmin:
     image: phpmyadmin
